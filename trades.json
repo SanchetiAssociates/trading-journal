@@ -1,0 +1,288 @@
+{
+  "account": {
+    "name": "SSS",
+    "capital": 100000,
+    "max_daily_risk": 10000,
+    "currency": "INR"
+  },
+  "days": [
+    {
+      "date": "2026-05-18",
+      "label": "Mon, 18 May 2026",
+      "context": {
+        "vix": 18.8,
+        "crude": 110,
+        "usd_inr": 96.0,
+        "gap": "Gap down",
+        "mood": ["Sell on rise", "High volatility"],
+        "nifty_open": 23450,
+        "nifty_close": 23633
+      },
+      "trades": [
+
+        {
+          "id": 1,
+          "instrument": "SUNPHARMA",
+          "sector": "Pharma",
+          "strategy": "Defensive sector — relative strength play",
+          "source": "Google Gemini",
+          "product": "MIS",
+          "type": "BUY",
+          "result": "WIN",
+          "simple": true,
+          "entry_time": "10:41:12",
+          "exit_time":  "10:42:23",
+          "entry":  1881.44,
+          "exit":   1910.00,
+          "qty":    312,
+          "sl":     0,
+          "target": 1910.00,
+          "pnl":    8909.47,
+          "notes": "Pharma defensive profile as safe haven against crude spike and weak Rupee. Stock showed extreme relative strength — absorbing selling pressure while Nifty bled. Institutional backing confirmed.",
+          "execution": "Perfect execution. Entry timed well, target hit exactly as planned."
+        },
+
+        {
+          "id": 2,
+          "instrument": "NIFTY 19 MAY",
+          "sector": "Index",
+          "strategy": "Bear Call Spread — tactical intraday index short",
+          "source": "Google Gemini",
+          "product": "MIS",
+          "type": "SPREAD",
+          "result": "LOSS",
+          "simple": false,
+          "legs": [
+            {
+              "action": "SELL",
+              "label": "Short leg",
+              "strike": "23500 CE",
+              "qty": 325,
+              "price": 77.90,
+              "time": "10:45:12",
+              "close_price": 134.45,
+              "close_time":  "11:32:17",
+              "leg_pnl":    -18378.75,
+              "flow_open":   25317.50,
+              "flow_close": -43696.25
+            },
+            {
+              "action": "BUY",
+              "label": "Hedge leg",
+              "strike": "23700 CE",
+              "qty": 325,
+              "price": 26.38,
+              "time": "10:45:19",
+              "close_price": 52.70,
+              "close_time":  "11:32:17",
+              "leg_pnl":    8554.00,
+              "flow_open":  -8573.50,
+              "flow_close": 17127.50
+            }
+          ],
+          "pnl": -9824.75,
+          "notes": "Tactical short on sell-on-rise momentum near 23,500. V-shape recovery invalidated thesis. Cut at stop loss — correct decision.",
+          "execution": "Short strike placed too close to money during volatile recovery. On high-VIX gap-down days, wait until 10:30 before initiating index positions."
+        },
+
+        {
+          "id": 3,
+          "instrument": "BANKNIFTY MAY",
+          "sector": "Index",
+          "strategy": "Bear Call Spread — positional option selling (5 lots CLOSED today)",
+          "source": "Positional / NRML",
+          "product": "NRML",
+          "type": "SPREAD",
+          "result": "WIN",
+          "simple": false,
+          "lot_size": 30,
+          "lots_closed": 5,
+          "note": "5 lots (150 contracts) closed at 09:37. Balance 5 lots remain open — see Trade 4.",
+          "legs": [
+            {
+              "action": "SELL",
+              "label": "Short leg — 53500 CE CLOSED",
+              "strike": "53500 CE",
+              "qty": 150,
+              "price": 1606.13,
+              "time": "Entry (positional)",
+              "close_price": 647.47,
+              "close_time":  "09:37:49",
+              "leg_pnl":    143799.00,
+              "flow_open":   240919.50,
+              "flow_close": -97120.50
+            },
+            {
+              "action": "BUY",
+              "label": "Hedge leg — 54500 CE CLOSED",
+              "strike": "54500 CE",
+              "qty": 150,
+              "price": 1012.92,
+              "time": "Entry (positional)",
+              "close_price": 291.35,
+              "close_time":  "09:37:55",
+              "leg_pnl":    -108235.50,
+              "flow_open":  -151938.00,
+              "flow_close":  43702.50
+            }
+          ],
+          "pnl": 35563.50,
+          "notes": "Partial profit booking — closed 5 of 10 lots profitably. Short 53500 CE bought back at 647.47 vs entry 1606.13 (+958.66/contract). Long 54500 CE sold at 291.35 vs entry 1012.92 (-721.57/contract).",
+          "execution": "Excellent timing. Closed near market open capturing maximum overnight theta decay. Retained balance 5 lots to harvest further decay into expiry."
+        },
+
+        {
+          "id": 4,
+          "instrument": "BANKNIFTY MAY",
+          "sector": "Index",
+          "strategy": "Bear Call Spread — positional option selling (5 lots OPEN)",
+          "source": "Positional / NRML",
+          "product": "NRML",
+          "type": "SPREAD",
+          "result": "OPEN",
+          "simple": false,
+          "lot_size": 30,
+          "lots_open": 5,
+          "last_updated": "2026-05-19 06:56 IST",
+          "note": "Remaining 5 lots from original 10-lot position. LTP updated to May 19 morning snapshot.",
+          "legs": [
+            {
+              "action": "SELL",
+              "label": "Short leg — 53500 CE OPEN",
+              "strike": "53500 CE",
+              "qty": 150,
+              "price": 1606.00,
+              "time": "Entry (positional)",
+              "close_price": null,
+              "close_time": "—",
+              "ltp": 881.90,
+              "unrealized_pnl": 108615.00,
+              "pct": -45.09,
+              "leg_pnl": 108615.00
+            },
+            {
+              "action": "BUY",
+              "label": "Hedge leg — 54500 CE OPEN",
+              "strike": "54500 CE",
+              "qty": 150,
+              "price": 1013.03,
+              "time": "Entry (positional)",
+              "close_price": null,
+              "close_time": "—",
+              "ltp": 415.65,
+              "unrealized_pnl": -89607.00,
+              "pct": -58.97,
+              "leg_pnl": -89607.00
+            }
+          ],
+          "pnl": 19008.00,
+          "pnl_type": "unrealized",
+          "notes": "5 open lots showing +19,008 unrealized as of May 19 morning. Short 53500 CE down 45.09% from entry (881.90 vs 1606), long 54500 CE down 58.97% (415.65 vs 1013). Both legs decaying well — position profitable. BankNifty expiry approaching.",
+          "execution": "Holding for further theta decay. Will monitor intraday for exit opportunity."
+        },
+
+        {
+          "id": 5,
+          "instrument": "NIFTY 2nd Jun Week",
+          "sector": "Index",
+          "strategy": "Bear Call Spread — positional option selling (26 lots OPEN)",
+          "source": "Positional / NRML",
+          "product": "NRML",
+          "type": "SPREAD",
+          "result": "OPEN",
+          "simple": false,
+          "lot_size": 25,
+          "lots_open": 26,
+          "expiry": "2nd Week Jun 2026",
+          "last_updated": "2026-05-19 06:56 IST",
+          "note": "Active Bear Call Spread only. Short 23200 CE / Long 23400 CE. 650 contracts per leg (26 lots × 25). LTP updated to May 19 morning snapshot.",
+          "legs": [
+            {
+              "action": "SELL",
+              "label": "Short leg — 23200 CE OPEN",
+              "strike": "23200 CE",
+              "qty": 650,
+              "price": 499.08,
+              "time": "Entry (positional)",
+              "close_price": null,
+              "close_time": "—",
+              "ltp": 661.50,
+              "unrealized_pnl": -105573.00,
+              "pct": -32.54,
+              "leg_pnl": -105573.00
+            },
+            {
+              "action": "BUY",
+              "label": "Hedge leg — 23400 CE OPEN",
+              "strike": "23400 CE",
+              "qty": 650,
+              "price": 386.09,
+              "time": "Entry (positional)",
+              "close_price": null,
+              "close_time": "—",
+              "ltp": 524.45,
+              "unrealized_pnl": 89934.00,
+              "pct": 35.84,
+              "leg_pnl": 89934.00
+            }
+          ],
+          "pnl": -15639.00,
+          "pnl_type": "unrealized",
+          "notes": "Bear Call Spread under pressure as Nifty has rallied above 23,200 short strike. Short 23200 CE is now 32.54% against entry. Long 23400 CE hedge partially offsets — up 35.84%. Net loss narrowed from -21,814 (May 18 EOD) to -15,639 (May 19 morning) as market pulled back slightly overnight.",
+          "execution": "Position improving. Nifty needs to stay below 23,200 for full premium capture. If 23200 CE sustains above 750, consider rolling short up or adding hedge."
+        }
+
+      ],
+
+      "lessons": [
+        {
+          "rule": "Risk management is paramount",
+          "detail": "Cut losses immediately when thesis is invalidated. The 23700 CE hedge offset Rs 8,554 of the Rs 18,378 short loss. Hedge structure saved the day.",
+          "source": "Google Gemini",
+          "implemented_in_nias": false
+        },
+        {
+          "rule": "No index trades in the first hour on gap-down / high-VIX days",
+          "detail": "Intraday spread forced too early in morning panic. Wait for 10:30 stabilisation on gap-down or VIX > 18 days.",
+          "source": "Google Gemini",
+          "implemented_in_nias": true,
+          "nias_note": "NIAS v3 blocks trading until 10:30 on gap-down days"
+        },
+        {
+          "rule": "Partial profit booking on positional option selling is smart",
+          "detail": "Closing 5 of 10 BankNifty lots when short leg was down 44% locked in Rs 35,563 profit while keeping remaining 5 lots for further theta decay.",
+          "source": "Personal / NRML",
+          "implemented_in_nias": false
+        },
+        {
+          "rule": "Wider strike selection for spreads",
+          "detail": "Intraday 23,500 CE short was too close to the money. Short strike must be at least 1.5x ATR OTM from current price.",
+          "source": "Google Gemini",
+          "implemented_in_nias": true,
+          "nias_note": "NIAS v3 suggests OTM strike levels based on live ATR in every signal"
+        },
+        {
+          "rule": "Trail stops to VWAP not a tight percentage buffer",
+          "detail": "0.5% trailing invites stop-loss hunting in high-volatility sessions. Trail to VWAP or cost price.",
+          "source": "Google Gemini",
+          "implemented_in_nias": true,
+          "nias_note": "NIAS v3 displays live VWAP level as trailing stop in every signal alert"
+        }
+      ],
+
+      "net_pnl": 34648.22,
+      "net_pnl_note": "Realized P&L only: Sun Pharma +8,909.47 + Nifty intraday spread -9,824.75 + BankNifty 5 lots closed +35,563.50 = +34,648.22",
+      "open_positions_unrealized": {
+        "label": "Unrealized as of May 19 06:56 IST",
+        "banknifty_5lots_open": 19008.00,
+        "nifty_2nd_jun_bear_call_spread": -15639.00,
+        "total_open_mtm": 3369.00
+      },
+      "signal_source_breakdown": {
+        "Google Gemini":    -915.28,
+        "Positional / NRML": 35563.50,
+        "NIAS / Claude":    0
+      }
+    }
+  ]
+}
